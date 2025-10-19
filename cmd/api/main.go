@@ -13,7 +13,8 @@ import (
 
 func main() {
 
-	connStr := "user=postgres password=mysecretpassword host=localhost port=5432 dbname=postgres sslmode=disable"
+	// connStr := "user=postgres password=mysecretpassword host=localhost port=5432 dbname=postgres sslmode=disable"
+	connStr := "user=postgres password=mysecretpassword host=host.docker.internal port=5432 dbname=postgres sslmode=disable"
 	db, err := sql.Open("pgx", connStr)
 	if err != nil {
 		log.Fatalf("Unable to connect to database: %v\n", err)
